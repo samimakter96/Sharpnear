@@ -1,9 +1,9 @@
 //  Q.1
-// console.log(a); // Uncaught ReferenceError: Cannot access 'a' before initialization
-// console.log(b);
-// let a = 5;
-// var b = 6;
-// console.log(b);
+console.log(a); // Uncaught ReferenceError: Cannot access 'a' before initialization
+console.log(b);
+let a = 5;
+var b = 6;
+console.log(b);
 
 
 // Q.2
@@ -59,23 +59,23 @@ console.log(x)  // ReferenceError: x is not defined
 //SyntaxError: Missing initializer in const declaration
 
 // Q.7 How to iterate an Object
-// const myObject = {
-//   key1: 'value1',
-//   key2: 'value2',
-//   key3: 'value3'
-// };
-
-// for (let key in myObject) {
-//   console.log(key + ": " + myObject[key]);
-// }
-
-// Using Object.keys method
 const myObject = {
   key1: 'value1',
   key2: 'value2',
   key3: 'value3'
 };
 
-Object.keys(myObject).forEach(key => {
+for (let key in myObject) {
+  console.log(key + ": " + myObject[key]);
+}
+
+// Using Object.keys method
+const myObject2 = {
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3'
+};
+
+Object.keys(myObject2).forEach(key => {
   console.log(key + ": " + myObject[key]);
 })
