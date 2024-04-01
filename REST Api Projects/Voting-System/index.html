@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voting System</title>
-</head>
-<body>
-  <div>
-    <div>
-      <h1>Class Monitor Vote</h1>
-      <p>total vote <span id="totalVote">0</span></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="firstDiv">
+        <h1>Class Monitor Vote</h1>
+        <p>Total Votes <span id="totalVote">0</span></p>
+      </div>
+      <br /><br />
+
+      <div>
+        <form onsubmit="handleFormSubmit(event)">
+          <label for="studentName">Student Name:</label>
+          <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required/>
+
+          <label for="monitor">Choose Monitor:</label>
+          <select name="monitor" id="monitor">
+            <option value="samim">Samim</option>
+            <option value="kartik">Kartik</option>
+            <option value="aman">Aman</option>
+          </select>
+
+          <button type="submit" id="voteBtn">Vote</button>
+        </form>
+      </div>
+      <br /><br />
+
+      <div>
+        <h1>Samim</h1>
+        <p>Total <span id="samimTotal">0</span></p>
+        <p id="samimVoters"></p>
+      </div>
+
+      <div>
+        <h1>Kartik</h1>
+        <p>Total <span id="kartikTotal">0</span></p>
+        <p id="kartikVoters"></p>
+      </div>
+
+      <div>
+        <h1>Aman</h1>
+        <p>Total <span id="amanTotal">0</span></p>
+        <p id="amanVoters"></p>
+      </div>
     </div>
-    <br><br>
-    <div>
-      <form onsubmit="handleFormSubmit(event)">
-        <label for="studentName">Student Name:</label>
-        <input type="text" id="studentName" name="studentName">
 
-        <label for="monitor">Choose Monitor:</label>
-        <select name="monitor" id="monitor">
-          <option value="samim">Samim</option>
-          <option value="kartik">Kartik</option>
-          <option value="aman">Aman</option>
-        </select>
-
-        <button type="submit">Vote</button>
-      </form>
-    </div>
-
-    <div>
-      <h1>Samim</h1>
-      <p>total <span id="samimTotal">0</span></p>
-      <!-- <ul id="samimVoters"></ul> -->
-      <p id="samimVoters"></p>
-    </div>
-
-    <div>
-      <h1>Kartik</h1>
-      <p>total <span id="kartikTotal">0</span></p>
-      <!-- <ul id="kartikVoters"></ul> -->
-      <p id="kartikVoters"></p>
-    </div>
-
-    <div>
-      <h1>Aman</h1>
-      <p>total <span id="amanTotal">0</span></p>
-      <!-- <ul id="amanVoters"></ul> -->
-      <p id="amanVoters"></p>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
-  <script src="app.js"></script>
-</body>
+    <!-- Axios cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <!-- javaScript  -->
+    <script src="app.js"></script>
+  </body>
 </html>

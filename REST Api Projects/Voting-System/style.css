@@ -1,0 +1,32 @@
+* {
+  font-family: sans-serif;
+}
+.container {
+  margin-left: 40px;
+}
+
+#firstDiv {
+  text-align: center;
+}
+#voteBtn {
+  margin-left: 5px;
+  background-color: green;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-button {
+  margin-left: 5px;
+  background-color: brown;
+  color: #fff;
+  padding: 4px 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
